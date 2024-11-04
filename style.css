@@ -1,3 +1,11 @@
+:root {
+    --clr-grn: hsl(75, 94%, 57%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-grey-700: hsl(0, 0%, 20%);
+    --clr-grey-800: hsl(0, 0%, 12%);
+    --clr-grey-900: hsl(0, 0%, 8%);
+}
+
 /* CSS reset */
 
 /* Box sizing rules */
@@ -77,3 +85,90 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+/* MAIN PAGE CSS  */
+body {
+    background-color: var(--clr-grey-900);
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-align: center;
+    color: var(--clr-white);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    min-height: 100dvh;
+}
+
+.wrapper {
+    background-color: var(--clr-grey-800);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.625rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    margin-inline: 16px;
+    gap: 1rem;
+}
+
+.profile-pic {
+    max-width: 5rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr-white);
+}
+
+.profile-location {
+    font-weight: 600;
+    color: var(--clr-grn);
+}
+
+.profile-designation {
+    color: var(--clr-white);
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 16px auto;
+    padding-block: 16px;
+    padding-inline: 16px;
+    min-width: 100%;
+}
+
+button {
+    background-color: var(--clr-grey-700);
+    border: none;
+    border-radius: 0.3rem;
+    min-width: 100%;
+    padding-block: 12.8px;
+}
+
+a {
+    color: var(--clr-white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.attribution { font-size: 0.6875rem; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

@@ -90,7 +90,7 @@ textarea:not([rows]) {
 body {
     background-color: var(--clr-grey-900);
     font-family: "Inter", sans-serif;
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, calc(0.75rem + 4vw), 0.875rem);
     font-weight: 400;
     text-align: center;
     color: var(--clr-white);
@@ -130,7 +130,7 @@ main {
 }
 
 .profile-name {
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
     font-weight: 700;
     color: var(--clr-white);
 }
@@ -153,15 +153,15 @@ main {
     margin: 16px auto;
     padding-block: 16px;
     padding-inline: 16px;
-    min-width: 100%;
+    width: 100%;
 }
 
 button {
     background-color: var(--clr-grey-700);
     border: none;
     border-radius: 0.3rem;
-    min-width: 100%;
     padding-block: 12.8px;
+    width: 100%;
 }
 
 button:hover {
@@ -182,3 +182,9 @@ button:hover a{
 
 .attribution { font-size: 0.6875rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (min-width: 29.6875rem) {
+  .wrapper {
+    min-width: 24rem;
+  }
+}

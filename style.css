@@ -94,6 +94,7 @@ body {
     font-weight: 400;
     text-align: center;
     color: var(--clr-white);
+    margin-inline: 0.8rem;
 }
 
 main {
@@ -105,11 +106,9 @@ main {
 }
 
 .wrapper {
+    width: 100%;
+    max-width: 24rem;
     background-color: var(--clr-grey-800);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     border-radius: 0.625rem;
 }
 
@@ -120,19 +119,20 @@ main {
     justify-content: center;
     margin-top: 24px;
     margin-inline: 16px;
-    gap: 1rem;
 }
 
 .profile-pic {
     max-width: 5rem;
     height: auto;
     border-radius: 50%;
+    margin-bottom: 24px;
 }
 
 .profile-name {
     font-size: clamp(1.25rem, 4vw, 1.5rem);
     font-weight: 700;
     color: var(--clr-white);
+    margin-bottom: 10px;
 }
 
 .profile-location {
@@ -141,6 +141,7 @@ main {
 }
 
 .profile-designation {
+    margin-top: 25px;
     color: var(--clr-white);
 }
 
@@ -150,41 +151,30 @@ main {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin: 16px auto;
-    padding-block: 16px;
-    padding-inline: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-block: 18px;
+    padding-inline: 32px;
     width: 100%;
 }
 
-button {
+.links a {
     background-color: var(--clr-grey-700);
+    color: var(--clr-white);
+    font-weight: 600;
+    text-decoration: none;
     border: none;
     border-radius: 0.3rem;
-    padding-block: 12.8px;
+    padding-block: 14px;
     width: 100%;
 }
 
-button:hover {
-    background-color: var(--clr-grn);
-    transition: all 0.2s;
-    cursor: pointer;
-}
-
-a {
-    color: var(--clr-white);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-button:hover a{
-    color: var(--clr-grey-800);
+.links a:hover {
+  background-color: var(--clr-grn);
+  color: var(--clr-grey-800);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .attribution { font-size: 0.6875rem; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-
-@media (min-width: 29.6875rem) {
-  .wrapper {
-    min-width: 24rem;
-  }
-}
